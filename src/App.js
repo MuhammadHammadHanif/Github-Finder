@@ -4,6 +4,7 @@ import axios from 'axios';
 import './App.css';
 import Navbar from './components/layout/Navbar';
 import Users from './components/users/Users';
+import Search from './components/users/Search';
 
 class App extends Component {
   state = {
@@ -27,6 +28,7 @@ class App extends Component {
       <div className='App'>
         <Navbar title='Github Finder' icon='fab fa-github' />
         <div className='container'>
+          <Search />
           <Users users={users} loading={loading} />
         </div>
       </div>
