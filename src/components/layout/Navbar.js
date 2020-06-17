@@ -6,9 +6,12 @@ import { NavLink } from 'react-router-dom';
 const Navbar = ({ title, icon }) => {
   return (
     <nav className='navbar bg-primary'>
-      <h1>
-        <i className={icon} /> {title}
-      </h1>
+      <NavLink to='/' exact>
+        <h1>
+          <i className={icon} /> {title}
+        </h1>
+      </NavLink>
+
       <ul>
         <li>
           <NavLink
