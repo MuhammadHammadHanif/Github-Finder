@@ -57,13 +57,12 @@ class App extends Component {
                       showClear={users.length > 0 ? true : false}
                       setAlert={this.setAlert}
                     />
+                    <Users users={users} loading={loading} />
                   </Fragment>
                 )}
               />
               <Route exact path='/about' component={About} />
             </Switch>
-
-            <Users users={users} loading={loading} />
           </div>
         </div>
       </Router>
