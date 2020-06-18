@@ -8,6 +8,14 @@ import NotFound from '../components/pages/NotFound';
 import Alert from '../components/layout/Alert';
 import User from '../components/users/User';
 
+let githubAboutLink;
+
+if (process.env.NODE_ENV !== 'production') {
+  githubAboutLink = process.env.REACT_APP_GITHUB_ABOUT_LINK;
+} else {
+  githubAboutLink = process.env.GITHUB_ABOUT_LINK;
+}
+
 const Routes = () => (
   <Router>
     <div className='App'>
@@ -16,7 +24,7 @@ const Routes = () => (
         <Alert />
         <Switch>
           <Route path='/' exact component={Home} />
-          <Route exact path='/about' component={About} />
+          <Route exact path={githubAboutLink} component={About} />
           <Route exact path='/user/:login' component={User} />
           <Route component={NotFound} />
         </Switch>

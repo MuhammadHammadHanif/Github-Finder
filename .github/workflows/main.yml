@@ -18,6 +18,7 @@ jobs:
     env:
       GITHUB_CLIENT_ID: ${{secrets.CLIENT_ID}}
       GITHUB_CLIENT_SECRET: ${{secrets.CLIENT_SECRET}}
+      GITHUB_ABOUT_LINK: ${{secrets.ABOUT_LINK}}
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
