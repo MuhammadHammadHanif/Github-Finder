@@ -20,7 +20,6 @@ if (process.env.NODE_ENV !== 'production') {
 } else {
   githubClientId = process.env.GITHUB_CLIENT_ID;
   githubClientSecret = process.env.GITHUB_CLIENT_SECRET;
-  console.log(githubClientId, githubClientSecret);
 }
 
 const GithubState = (props) => {
